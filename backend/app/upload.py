@@ -143,7 +143,7 @@ class IngestRunnable(RunnableSerializable[BinaryIO, List[str]]):
 
 
 PG_CONNECTION_STRING = PGVector.connection_string_from_db_params(
-    driver="psycopg2",
+    driver="psycopg",
     host=os.environ["POSTGRES_HOST"],
     port=int(os.environ["POSTGRES_PORT"]),
     database=os.environ["POSTGRES_DB"],
